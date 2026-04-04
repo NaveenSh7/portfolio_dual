@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&family=DM+Sans:wght@400;500;700&family=Orbitron:wght@700;800&family=Exo+2:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000;
+}
+
+@keyframes scroll-logos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-logos-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(36px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes radar-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes radar-ping1 {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(1.03);
+  }
+}
+
+@keyframes radar-ping2 {
+  0%,
+  100% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.25;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes radar-blink {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes floatParticle {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(180deg);
+  }
+}
+
+.dv-h1 {
+  animation: fadeInUp 0.8s ease both;
+}
+
+.dv-h2 {
+  animation: fadeInUp 0.8s ease 0.12s both;
+}
+
+.dv-h3 {
+  animation: fadeInUp 0.8s ease 0.24s both;
+}
+
+.dv-h4 {
+  animation: fadeInUp 0.8s ease 0.36s both;
+}
+
+.dv-radar {
+  animation: float 6s ease-in-out infinite;
+}
+
+.dv-navlink:hover {
+  color: var(--accent-color) !important;
+}
+
+.dv-social:hover {
+  color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+}
+
+.dv-skill-marquee {
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+.dv-skill-rows {
+  display: grid;
+  gap: 1rem;
+}
+
+.dv-skill-track {
+  display: flex;
+  width: max-content;
+  gap: 1.2rem;
+  animation: scroll-logos 28s linear infinite;
+  padding: 0.2rem 0.1rem;
+}
+
+.dv-skill-track-reverse {
+  animation-name: scroll-logos-reverse;
+}
+
+.dv-skill-track-1 {
+  animation-duration: 28s;
+}
+
+.dv-skill-track-2 {
+  animation-duration: 32s;
+}
+
+.dv-skill-track-3 {
+  animation-duration: 26s;
+}
+
+.dv-skill-marquee:hover .dv-skill-track {
+  animation-play-state: paused;
+}
+
+.dv-skill-card {
+  width: 112px;
+  height: 112px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.24s ease, border-color 0.24s ease;
+}
+
+.dv-skill-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-color) !important;
+}
+
+.dv-submit:hover {
+  transform: scale(1.03) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #555;
+}
+
+select option {
+  background: #111;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb, rgba(255, 0, 85, 0.4));
+  border-radius: 2px;
+}
+
+@media (max-width: 900px) {
+  .dv-hero-inner {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .dv-radar-wrap {
+    display: none !important;
+  }
+
+  .dv-contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .dv-proj-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .dv-skill-card {
+    width: 92px;
+    height: 92px;
+  }
+}
