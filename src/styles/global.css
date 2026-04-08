@@ -222,6 +222,10 @@ select option {
   .dv-hero-inner {
     flex-direction: column !important;
     text-align: center !important;
+    justify-content: flex-start !important;
+    padding: 84px 1rem 2rem !important;
+    height: auto !important;
+    min-height: 100vh !important;
   }
 
   .dv-radar-wrap {
@@ -239,5 +243,85 @@ select option {
   .dv-skill-card {
     width: 92px;
     height: 92px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dv-navbar {
+    height: 56px !important;
+    padding: 0 0.9rem !important;
+  }
+
+  .dv-navbar-brand {
+    font-size: 0.95rem !important;
+  }
+
+  .dv-mode-wrap {
+    gap: 0.45rem !important;
+  }
+
+  .dv-mode-label {
+    font-size: 0.53rem !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  .dv-mode-toggle {
+    width: 40px !important;
+    height: 22px !important;
+  }
+
+  .dv-hero-copy {
+    max-width: 100% !important;
+  }
+
+  .dv-h1 {
+    margin-bottom: 1rem !important;
+  }
+
+  .dv-h2,
+  .dv-h3 {
+    font-size: clamp(2.45rem, 11.5vw, 3.65rem) !important;
+    line-height: 0.95 !important;
+  }
+
+  .dv-hero-cta-row {
+    justify-content: center !important;
+    gap: 0.65rem !important;
+  }
+
+  .dv-hero-cta {
+    justify-content: center !important;
+    min-width: 145px !important;
+    padding: 0.8rem 1rem !important;
+    font-size: 0.7rem !important;
+    letter-spacing: 0.1em !important;
+  }
+
+  #projects,
+  #skills,
+  #contact,
+  #connect-play {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .dv-mode-label {
+    display: none !important;
+  }
+
+  .dv-navbar-brand {
+    font-size: 0.9rem !important;
+  }
+
+  .dv-h2,
+  .dv-h3 {
+    font-size: clamp(2.1rem, 12vw, 3rem) !important;
+  }
+
+  .dv-hero-cta {
+    width: 100% !important;
+    min-width: 0 !important;
   }
 }

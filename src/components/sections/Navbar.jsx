@@ -5,6 +5,7 @@ export default function Navbar({ t, mode, setMode, scrolled }) {
 
   return (
     <nav
+      className="dv-navbar"
       style={{
         position: "fixed",
         top: 0,
@@ -23,14 +24,16 @@ export default function Navbar({ t, mode, setMode, scrolled }) {
       }}
     >
       <div
+        className="dv-navbar-brand"
         style={{ fontFamily: t.fontDisplay, fontWeight: 800, fontSize: "1.1rem", color: "#fff", cursor: "pointer" }}
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       >
         Portfolio
       </div>
 
-      <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+      <div className="dv-mode-wrap" style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
         <span
+          className="dv-mode-label"
           style={{
             fontFamily: t.fontDisplay,
             fontSize: "0.65rem",
@@ -42,6 +45,7 @@ export default function Navbar({ t, mode, setMode, scrolled }) {
           PROFESSIONAL
         </span>
         <div
+          className="dv-mode-toggle"
           onClick={() => setMode((current) => (current === PROFESSIONAL ? GAMER : PROFESSIONAL))}
           style={{
             width: "44px",
@@ -54,6 +58,7 @@ export default function Navbar({ t, mode, setMode, scrolled }) {
           }}
         >
           <div
+            className="dv-mode-knob"
             style={{
               position: "absolute",
               top: "3px",
@@ -68,6 +73,7 @@ export default function Navbar({ t, mode, setMode, scrolled }) {
           />
         </div>
         <span
+          className="dv-mode-label"
           style={{
             fontFamily: t.fontDisplay,
             fontSize: "0.65rem",
