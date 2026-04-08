@@ -50,6 +50,7 @@ export default function ProjectsSection({ t }) {
         </FadeIn>
 
         <div
+          className="dv-proj-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",

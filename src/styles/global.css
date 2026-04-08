@@ -222,7 +222,8 @@ select option {
   .dv-hero-inner {
     flex-direction: column !important;
     text-align: center !important;
-    justify-content: flex-start !important;
+    justify-content: center !important;
+    align-items: center !important;
     padding: 84px 1rem 2rem !important;
     height: auto !important;
     min-height: 100vh !important;
@@ -240,9 +241,44 @@ select option {
     grid-template-columns: 1fr !important;
   }
 
+  .dv-proj-grid {
+    grid-template-columns: 1fr !important;
+  }
+
   .dv-skill-card {
     width: 92px;
     height: 92px;
+  }
+}
+
+@media (max-width: 900px) {
+  .dv-timeline-line {
+    left: 18px !important;
+    transform: none !important;
+  }
+
+  .dv-timeline-item {
+    grid-template-columns: 1fr !important;
+    margin-bottom: 2.2rem !important;
+  }
+
+  .dv-timeline-content-left,
+  .dv-timeline-content-right {
+    text-align: left !important;
+    padding: 0 0 0 2.2rem !important;
+  }
+
+  .dv-timeline-dot-wrap {
+    position: absolute !important;
+    left: 13px !important;
+    top: 0.85rem !important;
+    padding-top: 0 !important;
+  }
+
+  .dv-timeline-content-left > *,
+  .dv-timeline-content-right > * {
+    max-width: 100% !important;
+    margin-left: 0 !important;
   }
 }
 
@@ -272,6 +308,10 @@ select option {
 
   .dv-hero-copy {
     max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
   .dv-h1 {
@@ -287,6 +327,7 @@ select option {
   .dv-hero-cta-row {
     justify-content: center !important;
     gap: 0.65rem !important;
+    width: 100% !important;
   }
 
   .dv-hero-cta {
@@ -303,6 +344,15 @@ select option {
   #connect-play {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
+  }
+
+  .dv-proj-grid > * {
+    padding: 1.2rem 1rem !important;
+  }
+
+  .dv-proj-grid p {
+    font-size: 0.82rem !important;
+    line-height: 1.55 !important;
   }
 }
 
@@ -323,5 +373,37 @@ select option {
   .dv-hero-cta {
     width: 100% !important;
     min-width: 0 !important;
+  }
+
+  .dv-hero-inner {
+    padding-top: 74px !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  .dv-proj-grid {
+    border-radius: 6px !important;
+  }
+
+  .dv-proj-grid > * {
+    padding: 1rem 0.9rem !important;
+  }
+
+  .dv-proj-grid h2,
+  .dv-proj-grid h3,
+  .dv-proj-grid div[style*="font-size: \"1.05rem\""] {
+    word-break: break-word;
+  }
+
+  .dv-timeline-line {
+    left: 14px !important;
+  }
+
+  .dv-timeline-dot-wrap {
+    left: 9px !important;
+  }
+
+  .dv-timeline-content-left,
+  .dv-timeline-content-right {
+    padding-left: 1.8rem !important;
   }
 }
