@@ -71,7 +71,6 @@ export default function SkillsSection({ t }) {
           <div style={{ marginBottom: "3.5rem" }}>
             <div style={{ fontFamily: t.fontDisplay, fontSize: "0.68rem", letterSpacing: "0.22em", color: t.accent, textTransform: "uppercase", marginBottom: "0.6rem" }}>Skill Matrix</div>
             <h2 style={{ fontFamily: t.fontDisplay, fontSize: "clamp(2rem,4vw,3rem)", fontWeight: 800, letterSpacing: "-0.01em" }}>Skill matrix</h2>
-            <p style={{ color: "#666", fontSize: "0.97rem", maxWidth: "520px", lineHeight: 1.7, marginTop: "0.75rem" }}>A moving stack of core platform logos in the current engineering toolkit.</p>
           </div>
         </FadeIn>
         <div className="dv-skill-rows">

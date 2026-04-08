@@ -12,14 +12,16 @@ function Timeline({ t }) {
           left: "50%",
           top: 0,
           bottom: 0,
-          width: "1px",
-          background: `rgba(${t.accentRgb === "255,0,85" ? "255,0,85" : "0,229,255"},0.25)`,
+          width: "2px",
+          background: `rgba(${t.accentRgb === "255,0,85" ? "255,0,85" : "0,229,255"},0.5)`,
+          boxShadow: `0 0 18px rgba(${t.accentRgb === "255,0,85" ? "255,0,85" : "0,229,255"},0.7)`,
           transform: "translateX(-50%)",
         }}
       />
 
       {timeline.map((item, i) => {
         const isLeft = i % 2 === 0;
+        const isHighlightedTitle = ["Deloitte USI", "Shourya Foundation", "Shourya Foundationa", "EESA Web Head", "IIT Indore(joining)"].includes(item.title);
 
         return (
           <FadeIn key={item.year} delay={i * 0.12} fromLeft={isLeft} fromRight={!isLeft}>
@@ -51,12 +53,13 @@ function Timeline({ t }) {
                     <div
                       style={{
                         fontFamily: t.fontDisplay,
-                        fontSize: "0.85rem",
+                        fontSize: isHighlightedTitle ? "1.02rem" : "0.85rem",
                         fontWeight: 700,
                         color: "#fff",
                         letterSpacing: "0.12em",
                         textTransform: "uppercase",
                         marginBottom: "0.65rem",
+                        textShadow: "none",
                       }}
                     >
                       {item.title}
@@ -64,8 +67,10 @@ function Timeline({ t }) {
                     <p
                       style={{
                         fontFamily: "'Courier New', monospace",
-                        fontSize: "0.82rem",
-                        color: "#777",
+                        fontSize: "0.9rem",
+                        color: "#a8a8a8",
+                        fontWeight: 600,
+                        letterSpacing: "0.01em",
                         lineHeight: 1.75,
                         maxWidth: "320px",
                         marginLeft: "auto",
@@ -109,12 +114,13 @@ function Timeline({ t }) {
                     <div
                       style={{
                         fontFamily: t.fontDisplay,
-                        fontSize: "0.85rem",
+                        fontSize: isHighlightedTitle ? "1.02rem" : "0.85rem",
                         fontWeight: 700,
                         color: "#fff",
                         letterSpacing: "0.12em",
                         textTransform: "uppercase",
                         marginBottom: "0.65rem",
+                        textShadow: "none",
                       }}
                     >
                       {item.title}
@@ -122,8 +128,10 @@ function Timeline({ t }) {
                     <p
                       style={{
                         fontFamily: "'Courier New', monospace",
-                        fontSize: "0.82rem",
-                        color: "#777",
+                        fontSize: "0.9rem",
+                        color: "#a8a8a8",
+                        fontWeight: 600,
+                        letterSpacing: "0.01em",
                         lineHeight: 1.75,
                         maxWidth: "320px",
                       }}

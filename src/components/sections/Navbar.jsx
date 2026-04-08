@@ -39,7 +39,7 @@ export default function Navbar({ t, mode, setMode, scrolled }) {
             transition: "color 0.3s",
           }}
         >
-          PRO
+          PROFESSIONAL
         </span>
         <div
           onClick={() => setMode((current) => (current === PROFESSIONAL ? GAMER : PROFESSIONAL))}

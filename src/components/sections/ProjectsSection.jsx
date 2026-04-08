@@ -93,20 +93,9 @@ export default function ProjectsSection({ t }) {
                     display: "flex",
                     justifyContent: "space-between",
                     alignItems: "flex-start",
-                    marginBottom: "0.75rem",
+                    marginBottom: "0.4rem",
                   }}
                 >
-                  <span
-                    style={{
-                      fontFamily: t.fontDisplay,
-                      fontSize: "0.62rem",
-                      color: t.accent,
-                      letterSpacing: "0.16em",
-                      opacity: 0.7,
-                    }}
-                  >
-                    {project.year}
-                  </span>
                   <span style={{ fontSize: "1rem", opacity: hovered === i ? 1 : 0.3, transition: "opacity 0.2s" }}>
                     {"->"}
                   </span>
@@ -136,6 +125,26 @@ export default function ProjectsSection({ t }) {
                   {project.tag}
                 </div>
                 <p style={{ color: "#666", fontSize: "0.85rem", lineHeight: 1.65 }}>{project.desc}</p>
+                <button
+                  type="button"
+                  onClick={() => window.open(project.link, "_blank", "noopener,noreferrer")}
+                  style={{
+                    marginTop: "1.15rem",
+                    padding: "0.7rem 1rem",
+                    borderRadius: "999px",
+                    border: `1px solid rgba(${t.accentRgb},0.28)`,
+                    background: hovered === i ? `rgba(${t.accentRgb},0.12)` : "transparent",
+                    color: hovered === i ? t.accent : "#fff",
+                    fontFamily: t.fontDisplay,
+                    fontSize: "0.68rem",
+                    letterSpacing: "0.14em",
+                    textTransform: "uppercase",
+                    cursor: "pointer",
+                    transition: "all 0.2s ease",
+                  }}
+                >
+                  Open GitHub
+                </button>
               </div>
             </FadeIn>
           ))}
